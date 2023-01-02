@@ -3,7 +3,6 @@ package com.github.defaultkit;
 import com.github.defaultkit.command.DefaultKitCmd;
 import com.github.defaultkit.command.DefaultKitTabComplete;
 import com.github.defaultkit.event.InventoryCloseListener;
-import com.github.defaultkit.event.PlayerJoinListener;
 import com.github.nicklib.data.Config;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -33,7 +32,6 @@ public class DefaultKit extends JavaPlugin {
 
         // EVENT
         Bukkit.getPluginManager().registerEvents(new InventoryCloseListener(), this);
-        Bukkit.getPluginManager().registerEvents(new PlayerJoinListener(), this);
 
         // COMMAND
         Bukkit.getPluginCommand("defaultkit").setExecutor(new DefaultKitCmd());

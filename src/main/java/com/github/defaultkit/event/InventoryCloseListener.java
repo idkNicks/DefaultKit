@@ -1,6 +1,8 @@
 package com.github.defaultkit.event;
 
 import com.github.defaultkit.data.DefaultKitData;
+import com.github.defaultkit.data.StringData;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -14,6 +16,10 @@ public class InventoryCloseListener implements Listener {
     public void onClose(@NotNull InventoryCloseEvent event) {
         Player player = (Player) event.getPlayer();
         DefaultKitData defaultKitData = new DefaultKitData(player);
-        defaultKitData.settingDefaultKit(event);
+
+        if (event.getView().getTitle().equalsIgnoreCase("기본템 설정")) {
+            defaultKitData.setDefaultKit(event);
+            player.sendMessage(ChatColor.translateAlternateColorCodes('&', new StringData().setDefaultKit()));
+        }
     }
 }

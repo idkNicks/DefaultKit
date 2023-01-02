@@ -3,6 +3,7 @@ package com.github.defaultkit;
 import com.github.defaultkit.command.DefaultKitCmd;
 import com.github.defaultkit.command.DefaultKitTabComplete;
 import com.github.defaultkit.event.InventoryCloseListener;
+import com.github.nicklib.bstats.Metrics;
 import com.github.nicklib.data.Config;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -36,6 +37,9 @@ public class DefaultKit extends JavaPlugin {
         // COMMAND
         Bukkit.getPluginCommand("defaultkit").setExecutor(new DefaultKitCmd());
         Bukkit.getPluginCommand("defaultkit").setTabCompleter(new DefaultKitTabComplete());
+
+        // OTHER
+        Metrics metrics = new Metrics(this, 17265);
     }
 
 

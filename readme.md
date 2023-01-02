@@ -1,6 +1,6 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=DefaultKit%20&fontSize=90&animation=fadeIn&fontAlignY=38&desc=%20%20%20%20%20%20%20&descAlignY=51&descAlign=62)
 
-<p align='center'> 📚 『마인크래프트』 기본템 플러그인 📚 </p>
+<p align='center'> 🗃 『마인크래프트』 기본템 플러그인 🗃 </p>
 <p align='center'>
   <a href="https://github.com/idkNicks">
     <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white">

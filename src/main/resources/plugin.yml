@@ -1,0 +1,13 @@
+name: DefaultKit
+main: com.github.defaultkit.DefaultKit
+author: idkNicks
+description: A Minecraft Default kit plugin
+
+version: 1.0.0
+api-version: 1.13
+
+depend: [NickLib]
+
+commands:
+  defaultkit:
+    aliases: [ 기본템 ]

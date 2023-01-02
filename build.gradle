@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group 'com.github.defaultkit'
+version '1.0.0_Alpha'
+
+repositories {
+    mavenCentral()
+    maven {
+        url = "http://idkNicks.xyz:8081/repository/maven-public/"
+        allowInsecureProtocol = true
+    }
+}
+
+dependencies {
+
+    // DEPENDENCIES
+    implementation 'org.jetbrains:annotations:23.0.0'
+
+    // SPIGOT API
+    compileOnly "org.bukkit.spigotmc:spigot-api:1.19.2-R0.1"
+
+    // NICKLIB
+    compileOnly "com.github:nicklib:1.1.7"
+}
+
+jar {
+    destinationDirectory.set(file('C:\\Users\\Yangd\\대영\\마인크래프트\\서버\\마인크래프트\\개발용\\1.19.2\\plugins')) // Build Section
+}

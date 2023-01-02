@@ -3,9 +3,13 @@ package com.github.defaultkit.data;
 import com.github.defaultkit.DefaultKit;
 import com.github.nicklib.data.Config;
 import com.github.nicklib.utils.InventoryUtil;
+import com.github.nicklib.utils.ItemUtil;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.List;
 
 
 public class DefaultKitData {
@@ -36,10 +40,8 @@ public class DefaultKitData {
      * @param event InventoryCloseEvent
      */
     public void setDefaultKit(@NotNull InventoryCloseEvent event) {
-
         InventoryUtil inventoryUtil = new InventoryUtil(player, new Config("kit", DefaultKit.getPlugin()));
         inventoryUtil.saveInventory("defaultkit", event, event.getInventory());
-
     }
 
 
@@ -53,6 +55,11 @@ public class DefaultKitData {
         new Config("data/" + player.getUniqueId(), DefaultKit.getPlugin()).setBoolean("defaultKit", true);
     }
 
+
+    public void sadasd() {
+        ItemUtil itemUtil = new ItemUtil();
+        itemUtil.setItemStack(Material.OXIDIZED_CUT_COPPER, "test", List.of("", ""));
+    }
 
     /**
      * 플레이어의 기본템 정보를 초기화 시킵니다.
